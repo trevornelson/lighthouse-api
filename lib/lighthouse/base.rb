@@ -1,5 +1,11 @@
 module Lighthouse
   class Base < ActiveResource::Base
+    
+    def load
+      puts 'Im loading stuff'
+      super
+    end
+
     def self.inherited(base)
       Lighthouse.resources << base
       class << base        
