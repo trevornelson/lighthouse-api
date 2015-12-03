@@ -28,6 +28,10 @@ module Lighthouse
     attr_writer :tags
     site_format << '/projects/:project_id'
 
+    def initialize(inputs)
+      puts inputs
+    end
+
     def id
       attributes['number'] ||= nil
       number
